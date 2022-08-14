@@ -1,6 +1,6 @@
 ### React Query Tutorial
 
-*useQuery
+* useQuery
   - Query 에러 처리하기
   - React Query Devtools 사용
   - Query Cache 기본값 및 적용하기 (cacheTime, staleTime)
