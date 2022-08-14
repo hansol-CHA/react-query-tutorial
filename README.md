@@ -1,70 +1,27 @@
-# Getting Started with Create React App
+### React Query Tutorial
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+*useQuery
+  - Query 에러 처리하기
+  - React Query Devtools 사용
+  - Query Cache 기본값 및 적용하기 (cacheTime, staleTime)
+  - Refetch 옵션 적용히기 (refetchOnMount, refetchOnWindowFocus)
+  - Polling 적용하기 (refetchInterval, refetchIntervalInBackground)
+  - useQuery 특정 조건일 때 실행하기 ({ enabled: false })
+  - Success and Error callback을 통해 사이트 이펙트 처리하기 (모달 팝업, 페이지 이동 등)
+  - 원하는 데이터 형태로 응답받기 (select 옵션)
+  - Custom Query Hook 만들기 (onSucess, onError을 인자로 받음)
+  - Id을 이용하여 Query 하기 (상세 key 적용)
+  - Parallel Queries 적용하기
+  - Dynamic Parallel Queries 적용하기 (useQueries hook 사용)
+  - Dependent Queries로 서로 의존하는 API 호출하기 ({ enabled : !!조건 })
+  - Initial Query Data 데이터 초기값 설정하기 (QueryCLient 사용 - getQueryData메서드)
+  - Paginated Queries 처리하기 (useState 및 { keepPreviousData: true } 등을 활용)
+  - Infinite Queries 처리하기 (useInfinityQuery hook 사용 - getNextPageParams, hasNextPage, fetchNextPage 등)
 
-## Available Scripts
+* useMutation 
+  - Query Invalidation으로 데이터가 업데이트된 경우 자동으로 데이터 fetching 처리 
+    (queryClient.invalidateQueries(queryKey), onSuccess 등)
+  - queryClient.setQueryData 메서드로 post 후 다시 get 요청 없이 post를 통해 전달 받은 데이터 업데이트
+  - onMutate, onError, onSettled 등의 메서드를 사용하여 로컬 데이터 선 업데이트 후 원격 데이터 업데이트 진행
 
-In the project directory, you can run:
-
-### `npm start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+* Axios Interceptor
